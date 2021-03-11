@@ -1,0 +1,29 @@
+# class Files
+*.class
+
+# Package Files
+*.war
+*.ear
+
+# idea artifacts
+.idea/
+target/
+*.iml
+
+# Eclipse artifacts
+.settings
+.classpath
+.project
+
+bin/
+out/
+.gradle/
+build/
+
+
+/.gitignore
+
+/logs/
+*.log
+*.gz
+/*/logs/
