@@ -3,7 +3,7 @@ package com.hei123.solution.tree;
 import java.util.LinkedList;
 
 /**
- * @author lishencai lisc@yealink.com
+ * @author lishencai hei12138@outlook.com
  * @date 2021/3/12
  * @since 1.0.0
  */
