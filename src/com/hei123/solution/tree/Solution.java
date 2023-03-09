@@ -1,5 +1,7 @@
 package com.hei123.solution.tree;
 
+import com.hei123.solution.TreeNode;
+
 import java.util.LinkedList;
 import java.util.Stack;
 
