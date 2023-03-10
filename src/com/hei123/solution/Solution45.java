@@ -17,25 +17,16 @@ public class Solution45 {
     }
 
     public int jump(int[] arr) {
-        int[] dp = new int[arr.length];
-        dp[0] = 0;
-        if (arr[0] >= arr.length) {
-            return 1;
-        }
-        for (int i = 0; i < arr[0]; i++) {
-            dp[i] = 1;
-        }
-        for (int i = 1; i < arr.length; i++) {
-            for (int j = 0; j < arr[i]; j++) {
-                if (i + j > arr.length - 1) {
-                    return dp[i];
-                }
-                if (dp[i + j] != 0) {
-                    //之前已经跳过了
-                    dp[i + j] = dp[i] + 1;
-                }
+        int step = 0;
+        int end = 0;
+        int max = 0;
+        for (int i = 0; i < arr.length - 1; i++) {
+            max = Math.max(max, i + arr[i]);
+            if (i == end) {
+                step++;
+                end = max;
             }
         }
-        return 0;
+        return step;
     }
 }

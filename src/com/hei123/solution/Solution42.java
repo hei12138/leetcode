@@ -18,7 +18,7 @@ public class Solution42 {
         }
         int result = 0;
         for (int i = 0; i < n; i++) {
-            result = Math.min(leftMax[i], rightMax[i]) - height[i];
+            result += Math.min(leftMax[i], rightMax[i]) - height[i];
         }
         return result;
     }
