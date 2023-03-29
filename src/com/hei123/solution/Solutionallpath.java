@@ -3,10 +3,10 @@ package com.hei123.solution;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Solution2 {
+public class Solutionallpath {
 
     public static void main(String[] args) {
-        Solution2 solution2 = new Solution2();
+        Solutionallpath solution2 = new Solutionallpath();
         String arg = "abcd";
         List<String> result = new ArrayList<>();
         for (int i = 0; i <= arg.length() - 1; i++) {
