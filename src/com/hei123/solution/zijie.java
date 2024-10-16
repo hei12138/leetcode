@@ -2,18 +2,18 @@ package com.hei123.solution;
 
 import java.util.*;
 
-public class Solution1000 {
+public class zijie {
 
     public static void main(String[] args) {
-        Solution1000 solution1000 = new Solution1000();
+        zijie zijie = new zijie();
         int[][] value = new int[5][];
         value[0] = new int[]{1, 1};
         value[1] = new int[]{2, 2};
         value[2] = new int[]{3, 3};
         value[3] = new int[]{4, 5};
         value[4] = new int[]{1, 6};
-        int[][] sum = solution1000.sum(value);
-        int[][] topk = solution1000.topk(sum, 3);
+        int[][] sum = zijie.sum(value);
+        int[][] topk = zijie.topk(sum, 3);
         for (int i = 0; i < topk.length; i++) {
             System.out.println(Arrays.toString(topk[i]));
         }
