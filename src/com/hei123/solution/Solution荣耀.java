@@ -2,12 +2,11 @@ package com.hei123.solution;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
 /**
  * 荣耀笔试题
  */
-public class Solution3 {
+public class Solution荣耀 {
 
     public static List<String> result = new ArrayList<>();
 
