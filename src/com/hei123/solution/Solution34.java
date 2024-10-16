@@ -1,53 +1,55 @@
 package com.hei123.solution;
 
-import java.util.Arrays;
-
 public class Solution34 {
 
     public static void main(String[] args) {
-        Solution34 sol = new Solution34();
-        int[] ints = {1, 2, 3, 4, 5, 6};
-        int[] ints1 = sol.searchRange1(ints, 5);
-        System.out.println(Arrays.toString(ints1));
-        int i = sol.searchRange2(ints, 5);
-        System.out.println(i);
+        int[] ints = new int[]{5, 7, 7, 8, 8, 10};
+        Solution34 solution34 = new Solution34();
+        int[] ints1 = solution34.searchRange(ints, 8);
+        System.out.println();
     }
 
-    public int[] searchRange1(int[] nums, int target) {
-        int left = -1;
-        int right = -1;
-        for (int i = 0; i < nums.length; i++) {
-            if (nums[i] == target) {
-                if (left == -1) {
-                    left = i;
-                }
-                right = i;
-            }
+    public int[] searchRange(int[] nums, int target) {
+
+        int rightIdx = findFirstHigher(nums, target) - 1;
+        int leftIdx = findFirstHigherOrEqual(nums, target);
+        if (leftIdx <= rightIdx && rightIdx < nums.length && nums[leftIdx] == target && nums[rightIdx] == target) {
+            return new int[]{leftIdx, rightIdx};
         }
-        return new int[]{left, right};
+        return new int[]{-1, -1};
     }
 
-    /**
-     * 写个二分查找
-     *
-     * @param nums
-     * @param target
-     * @return
-     */
-    public int searchRange2(int[] nums, int target) {
+    //查找第一个大于该元素的位置
+    public int findFirstHigher(int[] nums, int target) {
         int left = 0;
         int right = nums.length - 1;
+        int pos = nums.length;
         while (left <= right) {
             int mid = (left + right) / 2;
-            if (nums[mid] == target) {
-                return mid;
-            }
-            if (nums[mid] < target) {
-                left = mid + 1;
-            }else{
+            if (nums[mid] > target) {
+                pos = mid;
                 right = mid - 1;
+            } else {
+                left = mid + 1;
             }
         }
-        return -1;
+        return pos;
+    }
+
+    //查找第一个大于或等于该元素的位置
+    public int findFirstHigherOrEqual(int[] nums, int target) {
+        int left = 0;
+        int right = nums.length - 1;
+        int pos = nums.length;
+        while (left <= right) {
+            int mid = (left + right) / 2;
+            if (nums[mid] >= target) {
+                pos = mid;
+                right = mid - 1;
+            } else {
+                left = mid + 1;
+            }
+        }
+        return pos;
     }
 }
