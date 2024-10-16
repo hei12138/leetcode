@@ -1,4 +1,4 @@
-package com.hei123.solution.offer;
+package com.hei123.solution.zijie;
 
 /**
  * 第一题. 字节跳动在北京有N个工区，形成一个环状，Bytebus是往返在各个工区的通勤车，按工区的顺序行驶，其中第 i 个工区有汽油 gas[i] 升。

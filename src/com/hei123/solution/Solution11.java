@@ -1,5 +1,7 @@
 package com.hei123.solution;
 
+import java.util.concurrent.locks.ReentrantLock;
+
 public class Solution11 {
 
     public static void main(String[] args) {
@@ -16,7 +18,6 @@ public class Solution11 {
         int max = Math.min(height[left], height[right]) * (right - left);
         while (left != right) {
             if (height[left] > height[right]) {
-                //计算当前最大面积
                 right--;
             } else {
                 left++;

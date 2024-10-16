@@ -1,4 +1,4 @@
-package com.hei123.solution;
+package com.hei123.solution.offer;
 
 import java.util.HashMap;
 import java.util.Map;

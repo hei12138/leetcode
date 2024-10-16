@@ -13,7 +13,7 @@ public class xiaomi {
         xiaomi xiaomi = new xiaomi();
         List<List<Integer>> result=new ArrayList<>();
         xiaomi.dfs(integers,0,0,new ArrayDeque<>(),result);
-        System.out.println();
+        System.out.println(result);
     }
 
     public void dfs(Integer[] values, int curPosition, int curDeep, Deque<Integer> curTemp, List<List<Integer>> result) {

@@ -12,37 +12,34 @@ public class Solution荣耀 {
 
     private static int max = 0;
 
+    /**
+     * n个苹果，分给k个人
+     * 可以抽象为插隔板
+     * *****
+     * 在每个位置选择插或者不插隔板
+     * @param args
+     */
     public static void main(String[] args) {
-        int n = 3;
-        int k = 2;
+        int n = 5;
+        int k = 3;
         max = n + k - 1;
-        splitGift2(n, k-1, "");
+        //k为隔板数量
+        splitGift(0, n, k-1, "");
         System.out.println(result.size());
         result.forEach(e -> {
             System.out.println(e);
         });
     }
 
-    public static void splitGift2(int n, int k, String temp) {
-        for (int i = 0; i < n + 1; i++) {
-            if(k==0){
-                //没人了，全给他
-                for (int j=0;j<n;j++){
-                    temp+="*";
-                }
-                result.add(temp);
-                return;
-            }
-            for (int j = 0; j < i; j++) {
-                temp += "*";
-            }
-            temp+="|";
-            splitGift2(n-i,k-1,temp);
-            temp="";
-        }
-
-    }
-
+    /**
+     * 这个思路是基于分苹果来的，分一个苹果拼接一个*，
+     * 不分的时候，加一个间隔
+     * K为隔板数量
+     * @param index
+     * @param n
+     * @param k
+     * @param temp
+     */
     public static void splitGift(int index, int n, int k, String temp) {
         //递归
         if (index == max) {
@@ -50,11 +47,11 @@ public class Solution荣耀 {
             return;
         }
         if (n > 0) {
-            //跟for循环类似，
+            //分
             splitGift(index + 1, n - 1, k, temp + "*");
         }
         if (k > 0) {
-            //如果还有人的话
+            //不分
             splitGift(index + 1, n, k - 1, temp + "|");
         }
 

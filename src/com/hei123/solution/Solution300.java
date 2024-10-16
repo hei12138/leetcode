@@ -4,7 +4,7 @@ public class Solution300 {
 
     public static void main(String[] args) {
         int[] ints = {10, 9, 2, 5, 3, 7, 101, 18};
-        int f = f(ints, 3);
+        int f = f(ints, ints.length-1);
         System.out.println(f);
     }
 

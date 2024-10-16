@@ -7,7 +7,7 @@ public class Solution78 {
     public static void main(String[] args) {
         Solution78 solution78 = new Solution78();
         List<List<Integer>> subsets = solution78.subsets(new int[]{1, 2,2});
-        System.out.println();
+        System.out.println(subsets);
     }
 
     public List<List<Integer>> subsets(int[] nums) {

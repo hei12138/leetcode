@@ -1,4 +1,4 @@
-package com.hei123.solution;
+package com.hei123.solution.zijie;
 
 import java.util.*;
 import java.util.stream.Collectors;
